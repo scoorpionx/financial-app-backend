@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "records",
+  "info": {
+    "name": "Records",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "reference": {
+      "model": "reference"
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    },
+    "due_date": {
+      "type": "date"
+    },
+    "user": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "records"
+    }
+  }
+}

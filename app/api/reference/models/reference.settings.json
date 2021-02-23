@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "references",
+  "info": {
+    "name": "Reference",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "user": {
+      "private": true,
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "references"
+    }
+  }
+}
